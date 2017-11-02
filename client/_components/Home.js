@@ -66,7 +66,7 @@ export default class Home extends React.Component {
 
                         {this.state.repos !== undefined && this.state.repos.map((repo, i) => {
                             return(
-                                <a href={repo.html_url} target="blank">
+                                <a href={repo.html_url} target="blank" key={i}>
                                     <ListItem
                                         primaryText={
                                             <span>
