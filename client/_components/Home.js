@@ -57,7 +57,7 @@ export default class Home extends React.Component {
 
                         {this.state.repos !== [] && this.state.repos.map((repo, i) => {
                             return(
-                                <Link to={`/userDetails/${i}`}>
+                                <a href={repo.html_url} target="blank">
                                     <ListItem
                                         primaryText={
                                             <span>
@@ -75,16 +75,16 @@ export default class Home extends React.Component {
                                             </p>
                                         }
                                     />
-                                </Link>
+                                </a>
                             )
                         })}
                     </List>
                 </div>
                 
-                <div>
+                {/* <div>
                     <RaisedButton label="Refresh" primary={true} style={marginRight} />
                     <RaisedButton label="Next Page" disabled={true} />
-                </div>
+                </div> */}
             </div>
         )
     }
