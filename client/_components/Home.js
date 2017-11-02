@@ -53,7 +53,7 @@ export default class Home extends React.Component {
                 marginBottom: "30px"
             }}>
                     <List>
-                        <Subheader>Latest Repos</Subheader>
+                        <Subheader>All Repositories {this.state.repos !== [] && "(" + this.state.repos.length + ")"}</Subheader>
 
                         {this.state.repos !== [] && this.state.repos.map((repo, i) => {
                             return(

@@ -22,7 +22,7 @@ export default class App extends React.Component {
         const marginRight = { marginRight: "10px" }
         return (
             <div>
-                {/* <Header /> */}
+                <Header />
                 
                 <div className="container">
                     <Router>

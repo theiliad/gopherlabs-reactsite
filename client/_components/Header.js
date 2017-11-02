@@ -1,5 +1,7 @@
 import React from 'react';
-import AppBar from 'material-ui/AppBar';
+// import AppBar from 'material-ui/AppBar';
+
+import LOGO from '../img/logo.svg';
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -8,9 +10,13 @@ export default class Header extends React.Component {
     
     render() {
         return (
-            <AppBar
-                title="Gopher Labs Org."
-            />
+            // <AppBar
+            //     title="Gopher Labs Org."
+            // />
+
+            <div id="header">
+                <img src={LOGO} />
+            </div>
         )
     }
 }
