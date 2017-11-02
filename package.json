@@ -22,6 +22,7 @@
   "homepage": "https://github.com/gopherLabsLtd/react16-starter#readme",
   "dependencies": {
     "axios": "^0.17.0",
+    "axios-retry": "^3.0.1",
     "core-js": "^2.5.1",
     "material-ui": "^0.19.2",
     "react": "^16.0.0",

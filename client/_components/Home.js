@@ -10,18 +10,22 @@ import {
 
 // Material-ui
 import RaisedButton from 'material-ui/RaisedButton';
+import CircularProgress from 'material-ui/CircularProgress';
 import Badge from 'material-ui/Badge';
 import Avatar from 'material-ui/Avatar';
 import {List, ListItem} from 'material-ui/List';
 import Subheader from 'material-ui/Subheader';
-import Divider from 'material-ui/Divider';
 import INFO_ICON from 'material-ui/svg-icons/action/info';
-
-//Axios
-import axios from 'axios';
 
 // Utilities
 import USERS_LIST from '../_utils/users';
+import GITHUB_LANG_COLORS from '../_utils/githubLanguageColors';
+
+//Axios
+import axios from 'axios';
+import axiosRetry from 'axios-retry';
+
+axiosRetry(axios, { retries: 3 });
 
 export default class Home extends React.Component {
     constructor(props) {
@@ -55,13 +59,18 @@ export default class Home extends React.Component {
                     <List>
                         <Subheader>All Repositories {this.state.repos !== [] && "(" + this.state.repos.length + ")"}</Subheader>
 
+                        {this.state.repos === [] &&
+                            <CircularProgress size={80} thickness={5} />
+                        }
+
                         {this.state.repos !== [] && this.state.repos.map((repo, i) => {
                             return(
                                 <a href={repo.html_url} target="blank">
                                     <ListItem
                                         primaryText={
                                             <span>
-                                                <span className="language">
+                                                <span className="language"
+                                                      style={{ background: GITHUB_LANG_COLORS[repo.language], color: repo.language === "JavaScript" ? "#333" : "" }}>
                                                     {repo.language}
                                                 </span>
 
