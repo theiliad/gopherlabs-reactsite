@@ -32,7 +32,7 @@ export default class Home extends React.Component {
         super(props);
 
         this.state = {
-            repos: []
+            repos: undefined
         };
     }
 
@@ -58,13 +58,13 @@ export default class Home extends React.Component {
                 backgroundColor: "#fff"
             }}>
                     <List>
-                        <Subheader>All Repositories {this.state.repos !== [] && "(" + this.state.repos.length + ")"}</Subheader>
+                        <Subheader>All Repositories {this.state.repos !== undefined && "(" + this.state.repos.length + ")"}</Subheader>
 
-                        {this.state.repos === [] &&
-                            <CircularProgress size={80} thickness={5} />
+                        {this.state.repos === undefined &&
+                            <CircularProgress size={80} thickness={5} style={{ margin: "auto", display: "block" }} />
                         }
 
-                        {this.state.repos !== [] && this.state.repos.map((repo, i) => {
+                        {this.state.repos !== undefined && this.state.repos.map((repo, i) => {
                             return(
                                 <a href={repo.html_url} target="blank">
                                     <ListItem
