@@ -15,7 +15,9 @@ export default class Header extends React.Component {
             // />
 
             <div id="header">
-                <img src={LOGO} />
+                <a href="https://gopher.it" target="_blank">
+                    <img src={LOGO} />
+                </a>
             </div>
         )
     }

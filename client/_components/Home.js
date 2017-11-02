@@ -54,7 +54,8 @@ export default class Home extends React.Component {
                 <div style={{
                 boxShadow: "0 5px 35px -2px rgba(0, 0, 0, 0.1)",
                 borderRadius: "2px",
-                marginBottom: "30px"
+                marginBottom: "30px",
+                backgroundColor: "#fff"
             }}>
                     <List>
                         <Subheader>All Repositories {this.state.repos !== [] && "(" + this.state.repos.length + ")"}</Subheader>
