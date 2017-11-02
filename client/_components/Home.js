@@ -10,6 +10,7 @@ import {
 
 // Material-ui
 import RaisedButton from 'material-ui/RaisedButton';
+import Badge from 'material-ui/Badge';
 import Avatar from 'material-ui/Avatar';
 import {List, ListItem} from 'material-ui/List';
 import Subheader from 'material-ui/Subheader';
@@ -58,8 +59,21 @@ export default class Home extends React.Component {
                             return(
                                 <Link to={`/userDetails/${i}`}>
                                     <ListItem
-                                        primaryText={repo.name}
-                                        secondaryText={repo.description}
+                                        primaryText={
+                                            <span>
+                                                <span className="language">
+                                                    {repo.language}
+                                                </span>
+
+                                                {repo.name}
+                                            </span>
+                                        }
+                                        secondaryText={
+                                            repo.description &&
+                                            <p style={{ paddingTop: "7.5px" }}>
+                                                {repo.description}
+                                            </p>
+                                        }
                                     />
                                 </Link>
                             )

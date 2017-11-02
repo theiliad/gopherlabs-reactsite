@@ -20,3 +20,14 @@ a {
 .marginBottom {
     margin-bottom: 30px;
 }
+
+span.language {
+    text-transform: uppercase;
+    font-size: 12px;
+    background: #00bcd4;
+    color: #fff;
+    padding: 3px 5px;
+    border-radius: 3px;
+    margin-right: 10px;
+    vertical-align: top;
+}
