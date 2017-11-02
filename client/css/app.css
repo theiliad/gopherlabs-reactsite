@@ -46,3 +46,14 @@ span.language {
     margin-right: 10px;
     vertical-align: top;
 }
+
+div#footer {
+    margin-bottom: 30px;
+    text-align: center;
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+div#footer span {
+    color: red;
+}

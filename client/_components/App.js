@@ -32,6 +32,10 @@ export default class App extends React.Component {
                         </Switch>
                     </Router>
                 </div>
+
+                <div className="container" id="footer">
+                    Made with <span>&#9829;</span> by Gopher Labs
+                </div>
             </div>
         )
     }
