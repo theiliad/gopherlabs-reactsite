@@ -41,7 +41,7 @@ export default class Home extends React.Component {
         .then(function (response) {
           if (response.data && response.data.length > 0) {
             this.setState({
-                repos: response.data
+                repos: response.data.reverse()
             });
           }
         }.bind(this))
